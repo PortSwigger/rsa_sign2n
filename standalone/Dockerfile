@@ -8,3 +8,6 @@ WORKDIR /app
 COPY . . 
 
 RUN pip3 install -r requirements.txt
+
+ADD entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
