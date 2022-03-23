@@ -13,7 +13,7 @@ echo "Running command: $cmd <token1> <token2>"
 $cmd $1 $2 | awk '
 	/==/ { exit }
 
-	/GCD|0x/ { next }
+	/GCD|^ 0x/ { next }
 	
 	{ sub(/\[\+] /, "") }
 	
